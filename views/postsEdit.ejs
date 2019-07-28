@@ -1,0 +1,39 @@
+<% include partials/header %>
+
+<div class="ui container main segment text">
+  <form class="ui form" action="/posts/create?_method=PUT" method="POST">
+    <h1>Beitrag bearbeiten</h1>
+    <div class="field">
+      <input
+        class="form"
+        type="text"
+        name="post[title]"
+        value="<%=foundPost.title%>"
+        placeholder="Titel"
+      />
+    </div>
+    <div class="field">
+      <input
+        value="<%=foundPost.image%>"
+        type="text"
+        name="post[image]"
+        placeholder="Link zum Bild"
+      />
+    </div>
+    <div class="field">
+      <textarea
+        placeholder="Inhalt"
+        name="post[content]"
+        id=""
+        cols="30"
+        rows="10"
+      >
+<%=foundPost.content%></textarea
+      >
+    </div>
+    <a href="/posts"><button class="ui teal basic button">Zurück</button></a>
+    <button class="ui teal right floated button">Speichern</button>
+  </form>
+</div>
+
+<% include partials/footer%>
