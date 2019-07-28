@@ -6,3 +6,14 @@
 .detail.ui.container.segment {
   margin-bottom: 14px;
 }
+
+#login {
+  padding-right: 0px;
+}
+
+.ui.right.menu.borderless {
+  border: none;
+  webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
