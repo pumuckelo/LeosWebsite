@@ -1,7 +1,18 @@
 <% include partials/header%>
 
-<div class="ui container">
-  <h1><%=foundPost.title%></h1>
+<div style="font-size: 1.4em;" class="detail ui container segment">
+  <h1 class="ui left floated">
+    <%=foundPost.title%>
+  </h1>
+  <img class="ui image big" src="<%=foundPost.image%>" alt="" />
+  <p><%=foundPost.created.toLocaleDateString()%></p>
+  <p></p>
+  <p style="white-space: pre-wrap;"><%-foundPost.content%></p>
+  <a href="/posts"><button class="ui basic button teal">Zurück</button></a>
+  <a href="/posts/<%=foundPost._id%>/edit">
+    <button class="ui button basic teal right floated">
+      <i class="pencil alternate icon"></i></button
+  ></a>
 </div>
 
 <% include partials/footer%>

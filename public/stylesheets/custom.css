@@ -1,3 +1,8 @@
 .ui.main.container {
   margin-top: 3em;
+  padding-top: 0;
+}
+
+.detail.ui.container.segment {
+  margin-bottom: 14px;
 }

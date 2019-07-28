@@ -64,13 +64,22 @@ app.get("/posts/:id", (req, res) => {
     if (err) {
       console.log("Post konnte nicht gefunden werden: " + err);
     } else {
-      res.render(postsDetail, {
+      res.render("postsDetail", {
         foundPost: foundPost
       });
     }
   });
 });
-
+//---------------- Post Edit ------------
+app.get("/posts/:id/edit", (req, res) => {
+  Post.findById(req.params.id, (err, foundPost) => {
+    if (err) {
+      console.log("Post konnte nicht gefunden werden: " + err);
+    } else {
+      res.render("postsEdit", { foundPost: foundPost });
+    }
+  });
+});
 // Post.create(
 //   {
 //     title: "So machst du jetzt geld junge",
