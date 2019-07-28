@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<div class="ui container">
+  x
+  <div class="ui main text container segment">
+    <div class="ui right rail">
+      <div class="ui segment">
+        Right Rail
+      </div>
+    </div>
+    <% allPosts.forEach(function(post){ %>
+    <h2><%= post.title %></h2>
+    <img class="ui image large" src="<%=post.image%>" alt="" />
+    <p><%= post.created.toLocaleDateString() %></p>
+    <p></p>
+    <p><%- post.content.substring(0,250) %>...</p>
+    <a href="/posts/<%=post._id%>">
+      <button class="ui button basic teal">Mehr</button></a
+    >
+    <div class="ui divider"></div>
+    <% }) %>
+  </div>
+</div>
+<% include partials/footer %>

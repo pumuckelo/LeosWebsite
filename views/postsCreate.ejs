@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="ui container main segment text">
+  <form class="ui form" action="/posts/create" method="POST">
+    <h1>Beitrag erstellen</h1>
+    <div class="field">
+      <input class="form" type="text" name="post[title]" placeholder="Titel" />
+    </div>
+    <div class="field">
+      <input type="text" name="post[image]" placeholder="Link zum Bild" />
+    </div>
+    <div class="field">
+      <textarea
+        placeholder="Inhalt"
+        name="post[content]"
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+    <a href="/posts"><button class="ui teal basic button">Zurück</button></a>
+    <button class="ui teal right floated button">Erstellen</button>
+  </form>
+</div>
+
+<% include partials/footer%>
