@@ -3,7 +3,6 @@ var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 var expressSanitizer = require("express-sanitizer");
 var methodOverride = require("method-override");
-
 var app = express();
 
 // Settings
@@ -27,3 +26,12 @@ mongoose.connect(
     }
   }
 );
+
+//Start Server
+app.listen(3000, err => {
+  if (err) {
+    console.log("Server-Fehler: " + err);
+  } else {
+    console.log("Server: verbunden");
+  }
+});
