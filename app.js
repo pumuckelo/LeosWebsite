@@ -80,6 +80,19 @@ app.get("/posts/:id/edit", (req, res) => {
     }
   });
 });
+
+//---------- Post Edit PUT ------------
+app.put("/posts/:id/update", (req, res) => {
+  Post.findByIdAndUpdate(req.params.id, req.body.post, (err, updatedPost) => {
+    if (err) {
+      console.log("Fehler beim Bearbeiten: " + err);
+    } else {
+      console.log(updatedPost.title + " wurde bearbeitet");
+      res.redirect("/posts");
+    }
+  });
+});
+
 // Post.create(
 //   {
 //     title: "So machst du jetzt geld junge",

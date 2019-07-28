@@ -1,7 +1,11 @@
 <% include partials/header %>
 
 <div class="ui container main segment text">
-  <form class="ui form" action="/posts/create?_method=PUT" method="POST">
+  <form
+    class="ui form"
+    action="/posts/<%=foundPost._id%>/update?_method=PUT"
+    method="POST"
+  >
     <h1>Beitrag bearbeiten</h1>
     <div class="field">
       <input
