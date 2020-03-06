@@ -93,20 +93,6 @@ app.put("/posts/:id/update", (req, res) => {
   });
 });
 
-// Post.create(
-//   {
-//     title: "So machst du jetzt geld junge",
-//     content:
-//       "Joa hier würde halt stehen, wie du mein Produkt kaufen kannst, damit du scheinbar geld machst :)))"
-//   },
-//   (err, createdPost) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log(createdPost.title + " wurde erstellt");
-//     }
-//   }
-// );
 
 //Start Server
 app.listen(3000, err => {
